@@ -15,7 +15,6 @@ const ENDPOINT = "https://api.github.com/users";
 const contEl = document.getElementById("output");
 const btnEl = document.getElementById("btn");
 const divEl = document.createElement("div");
-divEl.className = "container";
 
 async function getProperties() {
   const res = await fetch(ENDPOINT);
@@ -43,4 +42,13 @@ function renderCards(arr) {
     contEl.append(cardEl);
   });
 }
-// btnEl.addEventListener('click',getProperties() )
+
+function hideP() {
+  const messageEl = document.getElementById("message");
+  messageEl.style.display = "none";
+}
+
+btnEl.addEventListener("click", () => {
+  getProperties();
+  hideP();
+});

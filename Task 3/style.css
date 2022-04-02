@@ -68,4 +68,15 @@
 }
 img {
   max-width: 200px;
+  border-radius: 30%;
+}
+.single-card {
+  text-align: center;
+}
+.card-text {
+  margin-top: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial,
+    sans-serif;
+  font-size: larger;
+  color: #222;
 }
