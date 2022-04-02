@@ -80,3 +80,9 @@ img {
   font-size: larger;
   color: #222;
 }
+@media only screen and (max-width: 900px) {
+  #output {
+    display: flex;
+    flex-direction: column;
+  }
+}
