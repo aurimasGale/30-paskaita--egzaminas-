@@ -25,15 +25,16 @@ const users = [
 
 function filterDogOwners(arr) {
   const dogOwners = users.filter((arrObj) => arrObj.hasDog === true);
-  return console.log("dogOwners ===", dogOwners);
+  return dogOwners;
 }
-filterDogOwners(users);
-
+const hasDog = filterDogOwners(users);
+console.log("turi augintinį ===", hasDog);
 // 2. funkcija "filterAdults" - kaip argumentą priims masyvą ir duoto masyvo
 // atveju grąžins masyvą su "users", kurie yra pilnamečiai.
 
 function filterAdults(arr) {
   const adults = users.filter((arrObj) => arrObj.age > 17);
-  return console.log("adults ===", adults);
+  return adults;
 }
-filterAdults(users);
+const over18 = filterAdults(users);
+console.log("yra pilnamečiai ===", over18);
