@@ -12,9 +12,10 @@ const formEl = document.forms[0];
 const divEl = document.getElementById("output");
 const inputEl = document.getElementById("search");
 const ulEl = document.createElement("ul");
-const li1El = document.createElement("li");
-const li2El = document.createElement("li");
-const li3El = document.createElement("li");
+
+const li1El = document.createElement("ol");
+const li2El = document.createElement("ol");
+const li3El = document.createElement("ol");
 
 formEl.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -37,10 +38,10 @@ formEl.addEventListener("submit", (e) => {
     const toOz = parsed * 35.274;
     console.log(toLb);
 
-    ulEl.textContent = `${parsed} kg are equal to:`;
-    li1El.textContent = `${toLb} pounds.`;
-    li2El.textContent = `${toG} grams.`;
-    li3El.textContent = `${toOz} ounces.`;
+    ulEl.textContent = `${parsed} kilograms are equal to:`;
+    li1El.textContent = `${toLb.toFixed(2)} pounds,`;
+    li2El.textContent = `${toG} grams,`;
+    li3El.textContent = `or ${toOz.toFixed(2)} ounces.`;
     console.log(li1El);
 
     ulEl.append(li1El, li2El, li3El);
