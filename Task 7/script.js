@@ -10,9 +10,9 @@ const audi = {
   year: 2005,
   color: "white",
 };
-function objToArr(obj) {
-  const obValues = Object.values(obj);
+function showObjectKeys(obj) {
+  const obValues = Object.keys(obj);
   return obValues;
 }
-const objArr = objToArr(audi);
-console.log("new array ===", objArr);
+const objArr = showObjectKeys(audi);
+console.log("obj keys to array ===", objArr);
