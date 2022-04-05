@@ -20,8 +20,12 @@ class Movie {
   }
 }
 
-const newMovie = new Movie("chuck", "norris", 10000000);
+const newMovie = new Movie("chuck", "norris", 10000000111);
+const newMovie2 = new Movie("john", "doe", 1000);
 // console.log(newMovie);
 
 const m1 = newMovie.wasExpensive();
-console.log(m1);
+const m2 = newMovie2.wasExpensive();
+
+console.log("budget 10000000111 ===", m1);
+console.log("budget 10000 ===", m2);

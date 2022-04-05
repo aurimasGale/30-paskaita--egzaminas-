@@ -32,7 +32,7 @@ function getUserAverageAge(arr) {
 }
 const avgNum = getUserAverageAge(users);
 
-console.log(avgNum);
+console.log("average number ===", avgNum);
 
 // 2. funkcija "getUsersNames" -  kaip argumentą priims masyvą ir duoto masyvo
 // atveju grąžins visų "users" vardus naujame masyve pvz., ['John Smith', 'Ann Smith'..].
