@@ -21,15 +21,17 @@ formEl.addEventListener("submit", (e) => {
   e.preventDefault();
 
   console.log(inputEl.value);
-  const parsed = parseInt(inputEl.value);
+  const parsed = parseFloat(inputEl.value);
   console.log(parsed);
-  if (parsed == inputEl.value) {
+  if (parsed == inputEl.value && parsed > 0) {
     kgConversion(parsed);
+    inputEl.value = "";
   } else {
     showFailAlert();
+    inputEl.value = "";
     setTimeout(() => {
       location.reload();
-    }, 2000);
+    }, 3000);
   }
 
   function kgConversion(parsed) {
@@ -39,9 +41,9 @@ formEl.addEventListener("submit", (e) => {
     console.log(toLb);
 
     ulEl.textContent = `${parsed} kilograms are equal to:`;
-    li1El.textContent = `${toLb.toFixed(2)} pounds,`;
-    li2El.textContent = `${toG} grams,`;
-    li3El.textContent = `or ${toOz.toFixed(2)} ounces.`;
+    li1El.textContent = `${toLb.toFixed(2)} pounds`;
+    li2El.textContent = `${toG} grams`;
+    li3El.textContent = `${toOz.toFixed(2)} ounces.`;
     console.log(li1El);
 
     ulEl.append(li1El, li2El, li3El);
