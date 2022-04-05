@@ -32,24 +32,38 @@
 .card {
   text-align: center;
   margin-top: 50px;
-  height: 200px;
+  height: 500px;
   max-width: 500px;
   overflow: scroll;
   scrollbar-width: none;
   line-height: 2rem;
-  border: 5px solid #ffc107;
+  border: 5px solid #fbfaf8;
   border-radius: 20px;
   padding: 20px 40px;
   color: #6c757d;
-  background-color: #02b4e0;
+
+  outline: 5px solid black;
+  background-image: url(https://cdn.wallpapersafari.com/36/37/O5cokz.jpg);
+  background-position: center;
+  background-size: 100%;
 }
 .brand {
-  font-size: 30px;
-  color: #ffc107;
+  font-size: 50px;
+  color: #d5dafa;
   margin-bottom: 20px;
 }
 
 .models {
   color: #fdfdfe;
   word-spacing: 0.5em;
+}
+
+.ul-tag {
+  font-size: 1.5em;
+  margin-bottom: 0.4em;
+  color: gray;
+}
+
+.ol-tag {
+  color: #d5dafa;
 }

@@ -28,11 +28,25 @@ function createCard(arr) {
     h2El.className = "brand";
     const pEl = document.createElement("p");
     pEl.className = "models";
+    const ulEl = document.createElement("ul");
+    ulEl.textContent = "Models:";
+    ulEl.className = "ul-tag";
 
     h2El.textContent = arrObj.brand;
-    pEl.textContent = `Models: ${arrObj.models.join(", ")}`;
+    // pEl.textContent = `Models: ${arrObj.models.join(", ")} `;
+
     divEl.append(h2El);
+    divEl.append(ulEl);
     divEl.append(pEl);
     outputEl.append(divEl);
+
+    pEl.textContent = arrObj.models.forEach((mdl) => {
+      const olEl = document.createElement("ol");
+      olEl.className = "ol-tag";
+
+      olEl.textContent = mdl;
+
+      divEl.append(olEl);
+    });
   });
 }
